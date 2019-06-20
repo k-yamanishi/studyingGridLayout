@@ -19,10 +19,12 @@ body {
   display: -ms-grid;
   /* grid-template-columns: 100px 1fr; */
   -ms-grid-columns: 100px 1fr;
+  /*列*/
   /* grid-template-rows: 50px 1fr 50px; */
   -ms-grid-rows: 50px 1fr 50px;
-  height : 100%;
-  width  : 100%;
+  /*行*/
+  height: 100%;
+  width: 100%;
   overflow: auto;
   min-width: 1000px;
   min-height: 500px;
@@ -41,7 +43,8 @@ body {
   -ms-grid-column-span: 1;
   -ms-grid-row: 2;
   -ms-grid-row-span: 1;
-  background-color: red;
+  position: relative;
+  background-color: white;
 }
 
 .nav {
@@ -60,9 +63,133 @@ body {
   background-color: green;
 }
 
-.item {
-  background-color: orange;
-  width:100%;
-  height:100%;
-  opacity:0.5;
+.btn-flat-border {
+  display: inline-block;
+  padding: 0.3em 1em;
+  text-decoration: none;
+  color: #67c5ff;
+  border: solid 2px #67c5ff;
+  border-radius: 3px;
+  transition: .4s;
+  margin-top: 10px;
+}
+
+.btn-flat-border:hover {
+  background: #67c5ff;
+  color: white;
+}
+
+.btn-circle-border-simple {
+  display: inline-block;
+  text-decoration: none;
+  color: #67c5ff;
+  width: 15px;
+  height: 15px;
+  line-height: 15px;
+  border-radius: 50%;
+  border: solid 2px #67c5ff;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+  margin-top: 10px;
+}
+
+.btn-circle-border-simple:hover {
+  background: #67c5ff;
+}
+
+.ken {
+  margin-top: 5px;
+}
+
+.ken input {
+  margin-top: 10px;
+}
+
+#mapcontainer {
+  position: absolute;
+  z-index: 1;
+}
+
+.bousai {
+  background-color: white;
+  width: 300px;
+  height: 600px;
+  text-align: left;
+  margin-left: auto;
+  position: absolute;
+  z-index: 2;
+  top: 65px;
+  left: 900px;
+  opacity: 0.85;
+  font-size: 15px;
+}
+
+.ken {
+  display: none;
+}
+
+#btn-circle-border-simple {
+  position: absolute;
+  z-index: 2;
+  top: 0px;
+  left: 1100px;
+  display: inline-block;
+  text-decoration: none;
+  color: #67c5ff;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: solid 2px #67c5ff;
+  text-align: center;
+  overflow: hidden;
+  font-weight: bold;
+  transition: .4s;
+  margin-top: 18px;
+}
+
+.bousai {
+  display: block;
+}
+
+#btn-circle-border {
+  float: right;
+}
+
+.layer {
+  white-space: nowrap;
+}
+
+#Button {
+  position: absolute;
+  z-index: 3;
+  bottom: 0px;
+  width: 223px;
+  left: 20px;
+  text-align: center;
+}
+
+#hyozi {
+  position: relative;
+  left: 10%;
+  float: left;
+}
+
+#ken {
+  position: relative;
+  left: 20%;
+  float: left;
+}
+
+#bousai span {
+  font-size: 20px;
+}
+
+#location {
+  position: absolute;
+  z-index: 5;
+  top: 40px;
+  left: 1100px;
 }

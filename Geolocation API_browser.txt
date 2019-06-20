@@ -1,0 +1,18 @@
+http://www.htmq.com/geolocation/
+Firefox・Google Chrome・Safari対応済み
+バージョン確認
+
+https://developer.mozilla.org/ja/docs/Web/API/Geolocation/Using_geolocation
+https://developer.mozilla.org/ja/docs/Web/API/Geolocation/watchPosition
+https://developer.mozilla.org/ja/docs/Web/API/Geolocation
+一覧
+
+http://webdrawer.net/javascript/geolocation.html
+現在位置からそこそこずれる
+
+https://developer.mozilla.org/ja/docs/Web/API/Geolocation/watchPosition
+watchoption説明
+
+緯度　36.8736
+経度　137.4532
+間違っている

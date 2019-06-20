@@ -2,28 +2,66 @@
 <html lang="ja">
 
 <head>
-  <link rel="stylesheet" type="text/css" href="../css/index.css">
-
   <meta charset="UTF-8">
-
-  <title>studying grid layout</title>
-
+  <title>studyingGridLayout</title>
+  <link rel="stylesheet" type="text/css" href="../css/index.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.0/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.3.0/dist/leaflet.js"></script>
+  <script type="text/javascript" src="../js/index.js"></script>
 </head>
 
-<body>
-
+<body onload="init()">
   <!-- container -->
   <div class="container">
     <!-- header -->
     <header class="header">
+      <h2 id="location"></h2>
     </header>
     <!-- nav -->
     <nav class="nav">
     </nav>
     <!--main-->
     <div class="main" role="main">
-      <!-- mainの中にアイテムを入れてみる -->
-      <div class="item"></div>
+      <!-- map表示 -->
+      <div id="mapcontainer" style="width:100%;height:100%"></div>
+      <!-- <a href="#" class="btn-circle-border-simple" type="button" onclick="syoryakubtn();" id="btn-circle-border-simple">□</a>
+      <div class="bousai" id="bousai">
+        <span>防災関連レイヤー表示設定</span>
+        <a href="#" class="btn-circle-border-simple" type="button" onclick="syoryakubtn();" id="btn-circle-border">×</a>
+        <div class="">
+          <a href="#" class="btn-flat-border" type="button" onclick="onButtonClick();">表示</a>
+          避難所
+        </div>
+        <div id="hyozi">
+          <a href="#" class="btn-circle-border-simple" type="button" onclick="syoryaku();" id="plus">＋</a>
+          表示地域選択
+          <form name="cbox" style="display: inline-block; _display: inline;">
+            <input type="checkbox" name="" value="" onclick="zenkenHyozi();">
+            全県表示
+          </form>
+        </div><br><br>
+        <div class="ken" id="ken">
+          <form name="chbox">
+            <input type="checkbox" name="" value="HINANZYO_FUKUI">福井市<br>
+            <input type="checkbox" name="" value="HINANZYO_TURUGA">敦賀市<br>
+            <input type="checkbox" name="" value="HINANZYO_OBAMA">小浜市<br>
+            <input type="checkbox" name="" value="HINANZYO_OONO">大野市<br>
+            <input type="checkbox" name="" value="HINANZYO_KATUYAMA">勝山市<br>
+            <input type="checkbox" name="" value="HINANZYO_SABAE">鯖江市<br>
+            <input type="checkbox" name="" value="HINANZYO_AWARA">あわら市<br>
+            <input type="checkbox" name="" value="HINANZYO_ECHIZEN">越前市<br>
+            <input type="checkbox" name="" value="HINANZYO_SAKAI">坂井市<br>
+            <input type="checkbox" name="" value="HINANZYO_YOSIDA">吉田郡<br>
+            <input type="checkbox" name="" value="HINANZYO_IMADATE">今立郡<br>
+            <input type="checkbox" name="" value="HINANZYO_NANJO">南条郡<br>
+            <input type="checkbox" name="" value="HINANZYO_NIU">丹生郡<br>
+            <input type="checkbox" name="" value="HINANZYO_MIKATA">三方郡<br>
+            <input type="checkbox" name="" value="HINANZYO_OOI">大飯郡<br>
+            <input type="checkbox" name="" value="HINANZYO_MIKATAKAMI">三方上中郡<br>
+          </form>
+        </div>
+        <a href="#" class="btn-flat-border" id="Button" type="button" onclick="clearLayer()">防災関連レイヤーをクリア</a>
+      </div> -->
     </div>
     <!--footer-->
     <footer class="footer">
