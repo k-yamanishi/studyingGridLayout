@@ -14,44 +14,44 @@ function init() {
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { //ModalImageLinenupからコピーした
     attribution: 'Map data &copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors, '
   }).addTo(map);
-  assetLayerGroup = new L.LayerGroup();
-  e = document.getElementById("ken");
-  f = document.getElementById("bousai");
+  // assetLayerGroup = new L.LayerGroup();
+  // e = document.getElementById("ken");
+  // f = document.getElementById("bousai");
 }
 
-function onButtonClick() {
-  assetLayerGroup.clearLayers();
-  for (i = 0; i < 16; i++) {
-    if (document.chbox.elements[i].checked) {
-      setMapCash('hinanzyo', document.chbox.elements[i].value);
+// function onButtonClick() {
+//   assetLayerGroup.clearLayers();
+//   for (i = 0; i < 16; i++) {
+//     if (document.chbox.elements[i].checked) {
+//       setMapCash('hinanzyo', document.chbox.elements[i].value);
+//
+//     }
+//   }
+//   console.log(assetLayerGroup)
+//   assetLayerGroup.addTo(map)
+// }
 
-    }
-  }
-  console.log(assetLayerGroup)
-  assetLayerGroup.addTo(map)
-}
-
-function getFukuiBound() {
-  let corner1 = L.latLng(35.33977, 135.31036);
-  let corner2 = L.latLng(36.35606, 136.72073);
-  return L.latLngBounds(corner1, corner2);
-}
-
-function setMapCash(mapnm, layernm) {
-  layer = L.tileLayer.wms('http://172.16.1.204:20080/mapcache/', {
-    //crs:L.CRS.EPSG3857,//that's what I would like to
-    layers: layernm,
-    tileSize: 512,
-    format: 'image/png',
-    // attribution: '',
-    // maxZoom: 18
-    //pane:"bousaiPane",
-    transparent: true,
-    version: '1.3.0',
-    bounds: getFukuiBound()
-  });
-  assetLayerGroup.addLayer(layer);
-}
+// function getFukuiBound() {
+//   let corner1 = L.latLng(35.33977, 135.31036);
+//   let corner2 = L.latLng(36.35606, 136.72073);
+//   return L.latLngBounds(corner1, corner2);
+// }
+//
+// function setMapCash(mapnm, layernm) {
+//   layer = L.tileLayer.wms('http://172.16.1.204:20080/mapcache/', {
+//     //crs:L.CRS.EPSG3857,//that's what I would like to
+//     layers: layernm,
+//     tileSize: 512,
+//     format: 'image/png',
+//     // attribution: '',
+//     // maxZoom: 18
+//     //pane:"bousaiPane",
+//     transparent: true,
+//     version: '1.3.0',
+//     bounds: getFukuiBound()
+//   });
+//   assetLayerGroup.addLayer(layer);
+// }
 
 // function zenkenHyozi() {
 //   if (document.cbox.elements[0].checked) {
